@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { Send, ArrowRight } from 'lucide-react'
 import { FaCoins } from 'react-icons/fa6'
+import logo from './assets/logo.png'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -12,12 +13,22 @@ const fadeUp = {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 overflow-hidden relative">
+    <div className="min-h-screen bg-gray-50 flex flex-col px-4 overflow-hidden relative">
 
       {/* Background blurs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-red-400/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-red-400/10 rounded-full blur-3xl pointer-events-none" />
 
+      {/* Header */}
+      <motion.div
+        variants={fadeUp} initial="hidden" animate="visible" custom={-1}
+        className="flex items-center justify-center gap-3 pt-8 pb-4"
+      >
+        <img src={logo} alt="Logo" className="h-14 w-auto" />
+        <span className="text-2xl font-bold text-gray-900">Milliy Jamoasi</span>
+      </motion.div>
+
+      <div className="flex-1 flex items-center justify-center">
       <div className="relative w-full max-w-lg text-center">
 
         {/* Badge */}
@@ -78,6 +89,7 @@ export default function App() {
         >
           To'lovlar Telegram bot orqali amalga oshiriladi
         </motion.p>
+      </div>
       </div>
     </div>
   )

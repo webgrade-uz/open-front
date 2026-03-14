@@ -43,10 +43,10 @@ export default function App() {
           {/* Title */}
           <motion.h1
             variants={fadeUp} initial="hidden" animate="visible" custom={1}
-            className="text-5xl sm:text-6xl font-black text-white leading-tight mb-4"
+            className="text-3xl sm:text-4xl font-black text-white leading-tight mb-4"
           >
-            Har bitta ovoz<br />
-            <span className="text-white">uchun <span className="text-blue-400">35 000</span> so'm!</span>
+            Har bitta ovoz uchun<br />
+            <span className="text-blue-400">100 000 so'm</span> gacha!
           </motion.h1>
 
           {/* Subtitle */}
@@ -54,7 +54,7 @@ export default function App() {
             variants={fadeUp} initial="hidden" animate="visible" custom={2}
             className="text-lg text-gray-400 mb-8"
           >
-            Telegram'da ovoz bering va pul mukofotini oling.
+            Har bitta ovoz uchun 100.000 so'm gacha ishlash imkoni
           </motion.p>
 
           {/* Button */}
@@ -62,16 +62,25 @@ export default function App() {
             variants={fadeUp} initial="hidden" animate="visible" custom={3}
             className="flex justify-center"
           >
-            <a
+            <motion.a
               href="https://t.me/Openbudgetchibot"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-bold text-2xl rounded-2xl px-12 py-6 transition-colors shadow-lg shadow-blue-900/40"
+              className="inline-flex items-center justify-center gap-2 bg-blue-500 text-white font-bold text-3xl rounded-2xl px-14 py-7 shadow-2xl shadow-blue-500/60 ring-4 ring-blue-300/40"
+              style={{ boxShadow: '0 0 40px rgba(59,130,246,0.7), 0 0 80px rgba(59,130,246,0.3)' }}
+              animate={{ scale: [1, 1.04, 1], boxShadow: [
+                '0 0 40px rgba(59,130,246,0.7), 0 0 80px rgba(59,130,246,0.3)',
+                '0 0 60px rgba(59,130,246,0.9), 0 0 120px rgba(59,130,246,0.5)',
+                '0 0 40px rgba(59,130,246,0.7), 0 0 80px rgba(59,130,246,0.3)',
+              ]}}
+              transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+              whileHover={{ scale: 1.07 }}
+              whileTap={{ scale: 0.97 }}
             >
               <Send className="w-6 h-6" />
               Ovoz berish
               <ArrowRight className="w-6 h-6" />
-            </a>
+            </motion.a>
           </motion.div>
 
           <motion.p

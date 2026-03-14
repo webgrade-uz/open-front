@@ -63,7 +63,7 @@ export default function App() {
             href="https://t.me/Openbudgetchibot"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold text-lg rounded-xl px-8 py-4 transition-colors shadow-lg shadow-red-200"
+            className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white font-bold text-2xl rounded-2xl px-12 py-6 transition-colors shadow-lg shadow-red-200"
           >
             <Send className="w-5 h-5" />
             Ovoz berish
